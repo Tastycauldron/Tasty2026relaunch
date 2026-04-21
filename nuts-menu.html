@@ -11,10 +11,15 @@
 </head>
 <body>
   <div class="menu-shell">
-    <div class="menu-top">
-      <div class="menu-logo">Tasty Cauldron</div>
-      <a href="index.html" class="back-link">← Back to Home</a>
-    </div>
+   <div class="menu-top">
+  <div class="menu-logo">Tasty Cauldron</div>
+  <div class="top-links">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <a href="#" class="cart-button snipcart-checkout">
+      Cart (<span class="snipcart-items-count"></span>)
+    </a>
+  </div>
+</div>
 
     <main class="menu-page">
       <section class="menu-hero">
@@ -30,3 +35,93 @@
   </div>
 </body>
 </html>
+
+<section class="order-section">
+  <div class="order-heading">
+    <p class="eyebrow">Order from this menu</p>
+    <h2>Enchanted Nuts</h2>
+    <p>All candied nut options are $11 each.</p>
+  </div>
+
+  <div class="product-grid">
+    <article class="product-card">
+      <h3>Spellbound Almonds</h3>
+      <p class="product-desc">Candied almond blend.</p>
+      <p class="product-price">$11.00</p>
+      <button
+        class="snipcart-add-item add-btn"
+        data-item-id="spellbound-almonds"
+        data-item-name="Spellbound Almonds"
+        data-item-price="11.00"
+        data-item-url="/enchanted-nuts.html"
+        data-item-description="Candied almond blend"
+        data-item-image="/images/enchanted-nuts-menu.png">
+        Add to Cauldron
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3>Bewitched Pecans</h3>
+      <p class="product-desc">Candied pecan blend.</p>
+      <p class="product-price">$11.00</p>
+      <button
+        class="snipcart-add-item add-btn"
+        data-item-id="bewitched-pecans"
+        data-item-name="Bewitched Pecans"
+        data-item-price="11.00"
+        data-item-url="/enchanted-nuts.html"
+        data-item-description="Candied pecan blend"
+        data-item-image="/images/enchanted-nuts-menu.png">
+        Add to Cauldron
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3>Mystic Cashews</h3>
+      <p class="product-desc">Candied cashew blend.</p>
+      <p class="product-price">$11.00</p>
+      <button
+        class="snipcart-add-item add-btn"
+        data-item-id="mystic-cashews"
+        data-item-name="Mystic Cashews"
+        data-item-price="11.00"
+        data-item-url="/enchanted-nuts.html"
+        data-item-description="Candied cashew blend"
+        data-item-image="/images/enchanted-nuts-menu.png">
+        Add to Cauldron
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3>Charred Candied Walnuts</h3>
+      <p class="product-desc">Candied walnut blend.</p>
+      <p class="product-price">$11.00</p>
+      <button
+        class="snipcart-add-item add-btn"
+        data-item-id="charred-candied-walnuts"
+        data-item-name="Charred Candied Walnuts"
+        data-item-price="11.00"
+        data-item-url="/enchanted-nuts.html"
+        data-item-description="Candied walnut blend"
+        data-item-image="/images/enchanted-nuts-menu.png">
+        Add to Cauldron
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3>Enchanted Mixed Nuts</h3>
+      <p class="product-desc">Mixed candied nut blend.</p>
+      <p class="product-price">$11.00</p>
+      <button
+        class="snipcart-add-item add-btn"
+        data-item-id="enchanted-mixed-nuts"
+        data-item-name="Enchanted Mixed Nuts"
+        data-item-price="11.00"
+        data-item-url="/enchanted-nuts.html"
+        data-item-description="Mixed candied nut blend"
+        data-item-image="/images/enchanted-nuts-menu.png">
+        Add to Cauldron
+      </button>
+    </article>
+  </div>
+</section>
