@@ -12,9 +12,14 @@
 <body>
   <div class="menu-shell">
     <div class="menu-top">
-      <div class="menu-logo">Tasty Cauldron</div>
-      <a href="index.html" class="back-link">← Back to Home</a>
-    </div>
+  <div class="menu-logo">Tasty Cauldron</div>
+  <div class="top-links">
+    <a href="index.html" class="back-link">← Back to Home</a>
+    <a href="#" class="cart-button snipcart-checkout">
+      Cart (<span class="snipcart-items-count"></span>)
+    </a>
+  </div>
+</div>
 
     <main class="menu-page">
       <section class="menu-hero">
@@ -30,3 +35,123 @@
   </div>
 </body>
 </html>
+
+
+
+<section class="order-section">
+  <div class="order-heading">
+    <p class="eyebrow">Order from this menu</p>
+    <h2>Tea Menu</h2>
+    <p>Iced tea is $5. Loose leaf is $25 unless it contains vanilla bean, then it is $35.</p>
+  </div>
+
+  <div class="product-grid">
+    <article class="product-card">
+      <h3>Summer Solstice</h3>
+      <p class="product-desc">Dehydrated pineapple, dehydrated strawberry, dandelion leaf, papaya leaf, strawberry leaf.</p>
+      <p class="option-note">Choose iced or loose leaf.</p>
+      <button class="snipcart-add-item add-btn"
+        data-item-id="summer-solstice-tea"
+        data-item-name="Summer Solstice"
+        data-item-price="5.00"
+        data-item-url="/new-tea-menu.html"
+        data-item-description="Summer Solstice tea"
+        data-item-image="/images/new-tea-menu.png"
+        data-item-custom1-name="Tea Style"
+        data-item-custom1-options="Iced|Loose Leaf[+20.00]"
+        data-item-custom1-required="true">
+        Add to Cauldron
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3>Lunar Lavender</h3>
+      <p class="product-desc">Chamomile, lavender, mint, vanilla bean, meadowsweet herb.</p>
+      <p class="option-note">Loose leaf for this tea is $35 because it contains vanilla bean.</p>
+      <button class="snipcart-add-item add-btn"
+        data-item-id="lunar-lavender-tea"
+        data-item-name="Lunar Lavender"
+        data-item-price="5.00"
+        data-item-url="/new-tea-menu.html"
+        data-item-description="Lunar Lavender tea"
+        data-item-image="/images/new-tea-menu.png"
+        data-item-custom1-name="Tea Style"
+        data-item-custom1-options="Iced|Loose Leaf[+30.00]"
+        data-item-custom1-required="true">
+        Add to Cauldron
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3>Conjure</h3>
+      <p class="product-desc">Calendula flowers, mugwort, dandelion leaf, raspberry leaf.</p>
+      <p class="option-note">Choose iced or loose leaf.</p>
+      <button class="snipcart-add-item add-btn"
+        data-item-id="conjure-tea"
+        data-item-name="Conjure"
+        data-item-price="5.00"
+        data-item-url="/new-tea-menu.html"
+        data-item-description="Conjure tea"
+        data-item-image="/images/new-tea-menu.png"
+        data-item-custom1-name="Tea Style"
+        data-item-custom1-options="Iced|Loose Leaf[+20.00]"
+        data-item-custom1-required="true">
+        Add to Cauldron
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3>Winter Solstice</h3>
+      <p class="product-desc">Cacao nibs, marshmallow leaf, vanilla bean, meadowsweet herb, wild cherry bark.</p>
+      <p class="option-note">Loose leaf for this tea is $35 because it contains vanilla bean.</p>
+      <button class="snipcart-add-item add-btn"
+        data-item-id="winter-solstice-tea"
+        data-item-name="Winter Solstice"
+        data-item-price="5.00"
+        data-item-url="/new-tea-menu.html"
+        data-item-description="Winter Solstice tea"
+        data-item-image="/images/new-tea-menu.png"
+        data-item-custom1-name="Tea Style"
+        data-item-custom1-options="Iced|Loose Leaf[+30.00]"
+        data-item-custom1-required="true">
+        Add to Cauldron
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3>Crimson Moon</h3>
+      <p class="product-desc">Hibiscus, dehydrated apple, cinnamon, marshmallow leaf.</p>
+      <p class="option-note">Choose iced or loose leaf.</p>
+      <button class="snipcart-add-item add-btn"
+        data-item-id="crimson-moon-tea"
+        data-item-name="Crimson Moon"
+        data-item-price="5.00"
+        data-item-url="/new-tea-menu.html"
+        data-item-description="Crimson Moon tea"
+        data-item-image="/images/new-tea-menu.png"
+        data-item-custom1-name="Tea Style"
+        data-item-custom1-options="Iced|Loose Leaf[+20.00]"
+        data-item-custom1-required="true">
+        Add to Cauldron
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3>The Healer</h3>
+      <p class="product-desc">Echinacea, elderberry, gingko leaf, burdock root, nettle leaf.</p>
+      <p class="option-note">Choose iced or loose leaf.</p>
+      <button class="snipcart-add-item add-btn"
+        data-item-id="the-healer-tea"
+        data-item-name="The Healer"
+        data-item-price="5.00"
+        data-item-url="/new-tea-menu.html"
+        data-item-description="The Healer tea"
+        data-item-image="/images/new-tea-menu.png"
+        data-item-custom1-name="Tea Style"
+        data-item-custom1-options="Iced|Loose Leaf[+20.00]"
+        data-item-custom1-required="true">
+        Add to Cauldron
+      </button>
+    </article>
+  </div>
+</section>
