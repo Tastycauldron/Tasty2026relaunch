@@ -534,18 +534,82 @@ img {
 }
 
 
-
-
-/* TEST ANIMATION - obvious bounce */
-.product-card {
-  animation: testBounce 1.2s ease-in-out infinite !important;
+/* Floating sparkles and broomsticks */
+.magic-sparkles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
 }
 
-@keyframes testBounce {
-  0%, 100% {
-    transform: translateY(0);
+.magic-sparkles span {
+  position: absolute;
+  bottom: -60px;
+  font-size: 1.6rem;
+  opacity: 0.75;
+  animation: floatMagic 12s linear infinite;
+}
+
+.magic-sparkles span:nth-child(1) {
+  left: 8%;
+  animation-delay: 0s;
+  font-size: 1.4rem;
+}
+
+.magic-sparkles span:nth-child(2) {
+  left: 22%;
+  animation-delay: 2s;
+  font-size: 1.1rem;
+}
+
+.magic-sparkles span:nth-child(3) {
+  left: 35%;
+  animation-delay: 4s;
+  font-size: 1.8rem;
+}
+
+.magic-sparkles span:nth-child(4) {
+  left: 50%;
+  animation-delay: 1s;
+  font-size: 1.2rem;
+}
+
+.magic-sparkles span:nth-child(5) {
+  left: 65%;
+  animation-delay: 3s;
+  font-size: 1.5rem;
+}
+
+.magic-sparkles span:nth-child(6) {
+  left: 78%;
+  animation-delay: 5s;
+  font-size: 1.8rem;
+}
+
+.magic-sparkles span:nth-child(7) {
+  left: 90%;
+  animation-delay: 6s;
+  font-size: 1.2rem;
+}
+
+@keyframes floatMagic {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
   }
+
+  10% {
+    opacity: 0.8;
+  }
+
   50% {
-    transform: translateY(-12px);
+    transform: translateY(-50vh) rotate(180deg);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
   }
 }
