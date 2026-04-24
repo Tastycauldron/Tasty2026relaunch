@@ -532,3 +532,20 @@ img {
     left: 130%;
   }
 }
+
+
+
+
+/* TEST ANIMATION - obvious bounce */
+.product-card {
+  animation: testBounce 1.2s ease-in-out infinite !important;
+}
+
+@keyframes testBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
