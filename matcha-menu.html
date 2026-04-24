@@ -8,27 +8,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-   <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
 </head>
 
-
-
 <body>
-
-   <!-- Snipcart -->
   <div hidden id="snipcart" data-api-key="MWIxMTcwYzAtZGZhNi00MjU3LWFjNTItZDNhZDAxZWQ0MmQ5NjM5MTIyNTc5MzQ2MTMwNzY3"></div>
 
-
   <div class="menu-shell">
-   <div class="menu-top">
-  <div class="menu-logo">Tasty Cauldron</div>
-  <div class="top-links">
-    <a href="index.html" class="back-link">← Back to Home</a>
-    <a href="#" class="cart-button snipcart-checkout">
-      Cart (<span class="snipcart-items-count"></span>)
-    </a>
-  </div>
-</div>
+    <div class="menu-top">
+      <div class="menu-logo">Tasty Cauldron</div>
+      <div class="top-links">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        <a href="#" class="cart-button snipcart-checkout">
+          Cart (<span class="snipcart-items-count"></span>)
+        </a>
+      </div>
+    </div>
 
     <main class="menu-page">
       <section class="menu-hero">
@@ -40,103 +35,99 @@
       <section class="menu-frame green-glow">
         <img src="images/iced-matcha-menu.png" alt="Tasty Cauldron Iced Matcha Elixirs Menu" />
       </section>
+
+      <section class="order-section">
+        <div class="order-heading">
+          <p class="eyebrow">Order from this menu</p>
+          <h2>Add Matcha to Your Cauldron</h2>
+          <p>Select your elixirs below.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <h3>Mystic Matcha</h3>
+            <p class="product-desc">Classic iced matcha brew.</p>
+            <p class="product-price">$5.00</p>
+            <button
+              class="snipcart-add-item add-btn"
+              data-item-id="mystic-matcha"
+              data-item-name="Mystic Matcha"
+              data-item-price="5.00"
+              data-item-url="/iced-matcha.html"
+              data-item-description="Classic iced matcha brew"
+              data-item-image="/images/iced-matcha-menu.png">
+              Add to Cauldron
+            </button>
+          </article>
+
+          <article class="product-card">
+            <h3>Enchanted Vanilla</h3>
+            <p class="product-desc">Matcha with organic vanilla bean and sweet cream.</p>
+            <p class="product-price">$7.00</p>
+            <button
+              class="snipcart-add-item add-btn"
+              data-item-id="enchanted-vanilla-matcha"
+              data-item-name="Enchanted Vanilla"
+              data-item-price="7.00"
+              data-item-url="/iced-matcha.html"
+              data-item-description="Matcha with organic vanilla bean and sweet cream"
+              data-item-image="/images/iced-matcha-menu.png">
+              Add to Cauldron
+            </button>
+          </article>
+
+          <article class="product-card">
+            <h3>Witch's Delight</h3>
+            <p class="product-desc">Matcha with fresh strawberries.</p>
+            <p class="product-price">$6.00</p>
+            <button
+              class="snipcart-add-item add-btn"
+              data-item-id="witchs-delight-matcha"
+              data-item-name="Witch's Delight"
+              data-item-price="6.00"
+              data-item-url="/iced-matcha.html"
+              data-item-description="Matcha with fresh strawberries"
+              data-item-image="/images/iced-matcha-menu.png">
+              Add to Cauldron
+            </button>
+          </article>
+
+          <article class="product-card">
+            <h3>The Black Cat</h3>
+            <p class="product-desc">Matcha with blackberries.</p>
+            <p class="product-price">$6.00</p>
+            <button
+              class="snipcart-add-item add-btn"
+              data-item-id="the-black-cat-matcha"
+              data-item-name="The Black Cat"
+              data-item-price="6.00"
+              data-item-url="/iced-matcha.html"
+              data-item-description="Matcha with blackberries"
+              data-item-image="/images/iced-matcha-menu.png">
+              Add to Cauldron
+            </button>
+          </article>
+
+          <article class="product-card">
+            <h3>Banana Coven Cream</h3>
+            <p class="product-desc">Matcha with fresh bananas and sweet cream.</p>
+            <p class="product-price">$6.00</p>
+            <button
+              class="snipcart-add-item add-btn"
+              data-item-id="banana-coven-cream-matcha"
+              data-item-name="Banana Coven Cream"
+              data-item-price="6.00"
+              data-item-url="/iced-matcha.html"
+              data-item-description="Matcha with fresh bananas and sweet cream"
+              data-item-image="/images/iced-matcha-menu.png">
+              Add to Cauldron
+            </button>
+          </article>
+        </div>
+      </section>
     </main>
   </div>
-</body>
-</html>
 
-<section class="order-section">
-  <div class="order-heading">
-    <p class="eyebrow">Order from this menu</p>
-    <h2>Add Matcha to Your Cauldron</h2>
-    <p>Select your elixirs below.</p>
-  </div>
-
-  <div class="product-grid">
-    <article class="product-card">
-      <h3>Mystic Matcha</h3>
-      <p class="product-desc">Classic iced matcha brew.</p>
-      <p class="product-price">$5.00</p>
-      <button
-        class="snipcart-add-item add-btn"
-        data-item-id="mystic-matcha"
-        data-item-name="Mystic Matcha"
-        data-item-price="5.00"
-        data-item-url="/iced-matcha.html"
-        data-item-description="Classic iced matcha brew"
-        data-item-image="/images/iced-matcha-menu.png">
-        Add to Cauldron
-      </button>
-    </article>
-
-    <article class="product-card">
-      <h3>Enchanted Vanilla</h3>
-      <p class="product-desc">Matcha with organic vanilla bean and sweet cream.</p>
-      <p class="product-price">$7.00</p>
-      <button
-        class="snipcart-add-item add-btn"
-        data-item-id="enchanted-vanilla-matcha"
-        data-item-name="Enchanted Vanilla"
-        data-item-price="7.00"
-        data-item-url="/iced-matcha.html"
-        data-item-description="Matcha with organic vanilla bean and sweet cream"
-        data-item-image="/images/iced-matcha-menu.png">
-        Add to Cauldron
-      </button>
-    </article>
-
-    <article class="product-card">
-      <h3>Witch's Delight</h3>
-      <p class="product-desc">Matcha with fresh strawberries.</p>
-      <p class="product-price">$6.00</p>
-      <button
-        class="snipcart-add-item add-btn"
-        data-item-id="witchs-delight-matcha"
-        data-item-name="Witch's Delight"
-        data-item-price="6.00"
-        data-item-url="/iced-matcha.html"
-        data-item-description="Matcha with fresh strawberries"
-        data-item-image="/images/iced-matcha-menu.png">
-        Add to Cauldron
-      </button>
-    </article>
-
-    <article class="product-card">
-      <h3>The Black Cat</h3>
-      <p class="product-desc">Matcha with blackberries.</p>
-      <p class="product-price">$6.00</p>
-      <button
-        class="snipcart-add-item add-btn"
-        data-item-id="the-black-cat-matcha"
-        data-item-name="The Black Cat"
-        data-item-price="6.00"
-        data-item-url="/iced-matcha.html"
-        data-item-description="Matcha with blackberries"
-        data-item-image="/images/iced-matcha-menu.png">
-        Add to Cauldron
-      </button>
-    </article>
-
-    <article class="product-card">
-      <h3>Banana Coven Cream</h3>
-      <p class="product-desc">Matcha with fresh bananas and sweet cream.</p>
-      <p class="product-price">$6.00</p>
-      <button
-        class="snipcart-add-item add-btn"
-        data-item-id="banana-coven-cream-matcha"
-        data-item-name="Banana Coven Cream"
-        data-item-price="6.00"
-        data-item-url="/iced-matcha.html"
-        data-item-description="Matcha with fresh bananas and sweet cream"
-        data-item-image="/images/iced-matcha-menu.png">
-        Add to Cauldron
-      </button>
-    </article>
-  </div>
-</section>
-
-
- <!-- Snipcart Script -->
   <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
 </body>
 </html>
