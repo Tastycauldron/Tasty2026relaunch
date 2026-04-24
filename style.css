@@ -443,3 +443,92 @@ img {
     transform: translateY(0);
   }
 }
+
+
+
+/* Soft magical page entrance */
+.menu-shell {
+  animation: fadeInCauldron 0.9s ease forwards;
+}
+
+@keyframes fadeInCauldron {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glowing menu image */
+.menu-frame {
+  animation: softPulseGlow 3.5s ease-in-out infinite;
+}
+
+@keyframes softPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.18);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.42);
+  }
+}
+
+/* Product cards float in gently */
+.product-card {
+  animation: floatUp 0.7s ease both;
+}
+
+.product-card:nth-child(2) { animation-delay: 0.08s; }
+.product-card:nth-child(3) { animation-delay: 0.16s; }
+.product-card:nth-child(4) { animation-delay: 0.24s; }
+.product-card:nth-child(5) { animation-delay: 0.32s; }
+.product-card:nth-child(6) { animation-delay: 0.40s; }
+.product-card:nth-child(7) { animation-delay: 0.48s; }
+.product-card:nth-child(8) { animation-delay: 0.56s; }
+
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button shimmer */
+.add-btn,
+.cart-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.add-btn::after,
+.cart-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  animation: shimmerSpell 3s infinite;
+}
+
+@keyframes shimmerSpell {
+  0% {
+    left: -120%;
+  }
+  55%, 100% {
+    left: 130%;
+  }
+}
