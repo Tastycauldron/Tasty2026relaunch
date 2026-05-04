@@ -912,3 +912,56 @@ body {
     opacity: 0;
   }
 }
+
+
+
+
+
+/* 🔮 CAULDRON CORE (CENTER GLOW) */
+.cauldron-core {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 40px auto 0;
+}
+
+.core-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,154,85,0.6), rgba(161,109,220,0.25), transparent 70%);
+  filter: blur(18px);
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.core-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(200,154,85,0.4);
+  animation: rotateRing 8s linear infinite;
+}
+
+/* glow pulse */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* rotating magic ring */
+@keyframes rotateRing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
