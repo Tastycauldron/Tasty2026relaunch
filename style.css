@@ -832,3 +832,39 @@ body {
     opacity: 0;
   }
 }
+
+
+
+
+/* ⚡ LIGHTNING FLASH */
+.lightning-flash {
+  position: fixed;
+  inset: 0;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 5;
+  animation: lightningFlash 12s infinite;
+}
+
+@keyframes lightningFlash {
+  0%, 90%, 100% {
+    opacity: 0;
+  }
+
+  92% {
+    opacity: 0.15;
+  }
+
+  93% {
+    opacity: 0;
+  }
+
+  94% {
+    opacity: 0.25;
+  }
+
+  95% {
+    opacity: 0;
+  }
+}
