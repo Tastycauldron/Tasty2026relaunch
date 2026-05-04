@@ -732,32 +732,33 @@ body {
   }
 }
 
-/* ✨ MULTI MAGIC SKY (sparkles + brooms) */
+/* ✨ HOMEPAGE FLOATING MAGIC */
 .magic-sky {
   position: fixed;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
 }
 
 .magic-sky span {
   position: absolute;
   bottom: -80px;
-  opacity: 0.85;
-  animation: floatMagicSky linear infinite;
+  opacity: 0;
+  animation-name: floatMagicSky;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
-/* random placement + sizes + delays */
-.magic-sky span:nth-child(1) { left: 5%; animation-duration: 12s; animation-delay: 0s; font-size: 1.2rem; }
-.magic-sky span:nth-child(2) { left: 15%; animation-duration: 14s; animation-delay: 2s; font-size: 1rem; }
-.magic-sky span:nth-child(3) { left: 25%; animation-duration: 10s; animation-delay: 1s; font-size: 1.8rem; }
-.magic-sky span:nth-child(4) { left: 40%; animation-duration: 13s; animation-delay: 3s; font-size: 1.1rem; }
-.magic-sky span:nth-child(5) { left: 55%; animation-duration: 15s; animation-delay: 4s; font-size: 1.3rem; }
-.magic-sky span:nth-child(6) { left: 65%; animation-duration: 11s; animation-delay: 2s; font-size: 1.8rem; }
-.magic-sky span:nth-child(7) { left: 75%; animation-duration: 16s; animation-delay: 5s; font-size: 1rem; }
-.magic-sky span:nth-child(8) { left: 85%; animation-duration: 12s; animation-delay: 1s; font-size: 2rem; }
-.magic-sky span:nth-child(9) { left: 95%; animation-duration: 14s; animation-delay: 6s; font-size: 1.2rem; }
+.magic-sky span:nth-child(1) { left: 5%; animation-duration: 10s; animation-delay: -1s; font-size: 1.3rem; }
+.magic-sky span:nth-child(2) { left: 15%; animation-duration: 12s; animation-delay: -3s; font-size: 1rem; }
+.magic-sky span:nth-child(3) { left: 25%; animation-duration: 9s; animation-delay: -5s; font-size: 1.8rem; }
+.magic-sky span:nth-child(4) { left: 40%; animation-duration: 11s; animation-delay: -2s; font-size: 1.1rem; }
+.magic-sky span:nth-child(5) { left: 55%; animation-duration: 13s; animation-delay: -6s; font-size: 1.4rem; }
+.magic-sky span:nth-child(6) { left: 68%; animation-duration: 10s; animation-delay: -4s; font-size: 1.9rem; }
+.magic-sky span:nth-child(7) { left: 78%; animation-duration: 14s; animation-delay: -7s; font-size: 1rem; }
+.magic-sky span:nth-child(8) { left: 88%; animation-duration: 12s; animation-delay: -2s; font-size: 2rem; }
+.magic-sky span:nth-child(9) { left: 95%; animation-duration: 11s; animation-delay: -5s; font-size: 1.3rem; }
 
 @keyframes floatMagicSky {
   0% {
@@ -765,13 +766,12 @@ body {
     opacity: 0;
   }
 
-  10% {
+  15% {
     opacity: 0.9;
   }
 
-  50% {
-    transform: translateY(-50vh) rotate(180deg);
-    opacity: 1;
+  80% {
+    opacity: 0.9;
   }
 
   100% {
