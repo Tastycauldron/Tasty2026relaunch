@@ -653,3 +653,109 @@ body {
     transform: translateY(0);
   }
 }
+
+/* HOMEPAGE MAGIC ANIMATIONS */
+
+.hero-content {
+  animation: homepageFadeUp 1s ease both;
+}
+
+.shipping-notice {
+  animation: homepageGlowIn 1s ease both;
+  animation-delay: 0.25s;
+}
+
+.portal-card {
+  animation: homepageFadeUp 0.8s ease both;
+}
+
+.portal-card:nth-child(1) { animation-delay: 0.1s; }
+.portal-card:nth-child(2) { animation-delay: 0.2s; }
+.portal-card:nth-child(3) { animation-delay: 0.3s; }
+.portal-card:nth-child(4) { animation-delay: 0.4s; }
+.portal-card:nth-child(5) { animation-delay: 0.5s; }
+
+.contact-section {
+  animation: homepageFadeUp 0.9s ease both;
+}
+
+@keyframes homepageFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes homepageGlowIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 22px rgba(212, 175, 55, 0.22);
+  }
+}
+
+/* Portal cards hover lift */
+.portal-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portal-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 28px rgba(212, 175, 55, 0.32);
+}
+
+/* Button glow */
+.hero-btn {
+  position: relative;
+  overflow: hidden;
+  animation: buttonPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.22);
+  }
+
+  50% {
+    box-shadow: 0 0 24px rgba(212, 175, 55, 0.48);
+  }
+}
+
+/* Floating broom across homepage */
+.hero::after {
+  content: "🧹";
+  position: absolute;
+  top: 22%;
+  left: -80px;
+  font-size: 2rem;
+  opacity: 0.8;
+  animation: broomFly 14s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes broomFly {
+  0% {
+    transform: translateX(0) rotate(-10deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateX(120vw) rotate(18deg);
+    opacity: 0;
+  }
+}
