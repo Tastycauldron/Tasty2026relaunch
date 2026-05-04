@@ -732,21 +732,36 @@ body {
   }
 }
 
-/* Floating broom across homepage */
-.hero::after {
-  content: "🧹";
-  position: absolute;
-  top: 22%;
-  left: -80px;
-  font-size: 2rem;
-  opacity: 0.8;
-  animation: broomFly 14s linear infinite;
+/* ✨ MULTI MAGIC SKY (sparkles + brooms) */
+.magic-sky {
+  position: fixed;
+  inset: 0;
   pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
 }
 
-@keyframes broomFly {
+.magic-sky span {
+  position: absolute;
+  bottom: -80px;
+  opacity: 0.85;
+  animation: floatMagicSky linear infinite;
+}
+
+/* random placement + sizes + delays */
+.magic-sky span:nth-child(1) { left: 5%; animation-duration: 12s; animation-delay: 0s; font-size: 1.2rem; }
+.magic-sky span:nth-child(2) { left: 15%; animation-duration: 14s; animation-delay: 2s; font-size: 1rem; }
+.magic-sky span:nth-child(3) { left: 25%; animation-duration: 10s; animation-delay: 1s; font-size: 1.8rem; }
+.magic-sky span:nth-child(4) { left: 40%; animation-duration: 13s; animation-delay: 3s; font-size: 1.1rem; }
+.magic-sky span:nth-child(5) { left: 55%; animation-duration: 15s; animation-delay: 4s; font-size: 1.3rem; }
+.magic-sky span:nth-child(6) { left: 65%; animation-duration: 11s; animation-delay: 2s; font-size: 1.8rem; }
+.magic-sky span:nth-child(7) { left: 75%; animation-duration: 16s; animation-delay: 5s; font-size: 1rem; }
+.magic-sky span:nth-child(8) { left: 85%; animation-duration: 12s; animation-delay: 1s; font-size: 2rem; }
+.magic-sky span:nth-child(9) { left: 95%; animation-duration: 14s; animation-delay: 6s; font-size: 1.2rem; }
+
+@keyframes floatMagicSky {
   0% {
-    transform: translateX(0) rotate(-10deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 0;
   }
 
@@ -754,8 +769,13 @@ body {
     opacity: 0.9;
   }
 
+  50% {
+    transform: translateY(-50vh) rotate(180deg);
+    opacity: 1;
+  }
+
   100% {
-    transform: translateX(120vw) rotate(18deg);
+    transform: translateY(-120vh) rotate(360deg);
     opacity: 0;
   }
 }
