@@ -613,3 +613,26 @@ img {
     opacity: 0;
   }
 }
+
+.shipping-notice {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 18px 22px;
+  text-align: center;
+  background: rgba(30, 20, 45, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 18px;
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.15);
+}
+
+.shipping-notice p {
+  margin: 0;
+  color: #f4ecff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.shipping-notice strong {
+  color: #ffd700;
+}
