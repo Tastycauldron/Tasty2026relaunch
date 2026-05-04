@@ -868,3 +868,47 @@ body {
     opacity: 0;
   }
 }
+
+
+
+
+/* ⚡ STRONGER LIGHTNING FLASH */
+.lightning-flash {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 9999;
+  animation: lightningFlash 8s infinite;
+}
+
+@keyframes lightningFlash {
+  0%, 78%, 100% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0.55;
+  }
+
+  81% {
+    opacity: 0;
+  }
+
+  82% {
+    opacity: 0.35;
+  }
+
+  83% {
+    opacity: 0;
+  }
+
+  84% {
+    opacity: 0.65;
+  }
+
+  85% {
+    opacity: 0;
+  }
+}
