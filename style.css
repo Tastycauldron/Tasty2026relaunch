@@ -956,4 +956,30 @@ body {
   border-radius: 20px;
   display: block;
 }
+
+```css id="9f7dbz"
+/* ✨ TEA FEATURE IMAGE */
+.tea-banner {
+  max-width: 700px;
+  margin: 2rem auto 3rem;
+  padding: 0.8rem;
+  border-radius: 30px;
+  background: rgba(20, 16, 28, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 0 28px rgba(212, 175, 55, 0.18);
+}
+
+.tea-banner img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* subtle luxury hover */
+.tea-banner img:hover {
+  transform: scale(1.02);
+}
 ```
