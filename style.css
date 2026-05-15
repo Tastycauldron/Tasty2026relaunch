@@ -938,3 +938,21 @@ body {
 .balm-card .add-btn {
   margin-top: 1rem;
 }
+
+
+.balm-banner {
+  max-width: 850px;
+  margin: 0 auto 2.5rem;
+  padding: 0.8rem;
+  border-radius: 30px;
+  background: rgba(20, 16, 28, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 0 28px rgba(212, 175, 55, 0.18);
+}
+
+.balm-banner img {
+  width: 100%;
+  border-radius: 22px;
+  display: block;
+  object-fit: cover;
+}
