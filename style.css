@@ -1010,8 +1010,10 @@ body {
 
 
 
+/* SHOP DROPDOWN */
 .dropdown {
   position: relative;
+  z-index: 10000;
 }
 
 .dropdown-btn {
@@ -1025,13 +1027,13 @@ body {
   right: 0;
   top: 115%;
   min-width: 170px;
-  background: rgba(20, 16, 28, 0.96);
-  border: 1px solid rgba(212, 175, 55, 0.28);
+  background: rgba(20, 16, 28, 0.98);
+  border: 1px solid rgba(212, 175, 55, 0.35);
   border-radius: 18px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
   padding: 0.6rem;
   display: none;
-  z-index: 999;
+  z-index: 10001;
 }
 
 .dropdown-menu a {
@@ -1041,6 +1043,7 @@ body {
   padding: 0.8rem 1rem;
   border-radius: 12px;
   font-family: 'Inter', sans-serif;
+  white-space: nowrap;
 }
 
 .dropdown-menu a:hover {
@@ -1048,6 +1051,7 @@ body {
   color: #ffd700;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
   display: block;
 }
