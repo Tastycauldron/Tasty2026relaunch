@@ -1107,3 +1107,108 @@ main,
 html {
   scroll-behavior: smooth;
 }
+
+.custom-tea-section {
+  margin: 40px auto;
+  padding: 28px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 24px;
+  background: rgba(25, 10, 40, 0.78);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.15);
+  text-align: center;
+}
+
+.custom-tea-section h2 {
+  font-family: 'Cinzel', serif;
+  color: #f5d77b;
+}
+
+.custom-price {
+  color: #f8e7a1;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.custom-herb-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+  text-align: left;
+}
+
+.custom-herb-options label {
+  padding: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 14px;
+  color: #fff4cf;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tea-blend-message {
+  color: #f5d77b;
+  font-weight: 600;
+}
+
+.custom-tea-button {
+  border: none;
+  border-radius: 999px;
+  padding: 13px 22px;
+  background: linear-gradient(135deg, #c99a2e, #f5d77b);
+  color: #1b0b2e;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+
+.custom-tea-section {
+  margin: 40px auto;
+  padding: 28px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 24px;
+  background: rgba(25, 10, 40, 0.78);
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.15);
+  text-align: center;
+}
+
+.custom-tea-section h2 {
+  font-family: 'Cinzel', serif;
+  color: #f5d77b;
+}
+
+.custom-price {
+  color: #f8e7a1;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.custom-herb-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin: 22px 0;
+  text-align: left;
+}
+
+.custom-herb-options label {
+  padding: 12px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 14px;
+  color: #fff4cf;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.tea-blend-message {
+  color: #f5d77b;
+  font-weight: 600;
+}
+
+.custom-tea-button {
+  border: none;
+  border-radius: 999px;
+  padding: 13px 22px;
+  background: linear-gradient(135deg, #c99a2e, #f5d77b);
+  color: #1b0b2e;
+  font-weight: 800;
+  cursor: pointer;
+}
