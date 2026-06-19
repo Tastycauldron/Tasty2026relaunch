@@ -142,7 +142,7 @@
         data-item-price="16.00"
         data-item-url="index.html"
         data-item-description="A calming botanical balm for relaxation and moisture."
-        data-item-image="/images/herbalsalve.png">
+        data-item-image="/images/calm-spell-balm.png">
         Add to Cauldron
       </button>
     </div>
@@ -167,7 +167,7 @@
         data-item-price="18.00"
         data-item-url="index.html"
         data-item-description="Golden botanical balm with a warm comforting glow."
-        data-item-image="/images/herbalsalve.png">
+        data-item-image="/images/golden-glow-balm.png">
         Add to Cauldron
       </button>
     </div>
@@ -191,7 +191,7 @@
         data-item-price="20.00"
         data-item-url="index.html"
         data-item-description="Grounding herbal balm for repair and restoration."
-        data-item-image="/images/herbalsalve.png">
+        data-item-image="/images/restore-repair-balm.png">
         Add to Cauldron
       </button>
     </div>
@@ -229,6 +229,52 @@
           <h3>Iced Matcha Elixirs</h3>
           <p>Bright, bold, magical matcha creations.</p>
         </a>
+
+
+
+        <section class="custom-tea-section">
+  <h2>Create Your Own Tea Blend</h2>
+  <p>
+  Choose up to 5 herbs for a custom loose leaf tea blend.
+  Base price is $25.
+  Vanilla Bean adds $10.
+  Rhodiola adds $15.
+</p>
+  <p class="custom-price">
+    Price: <span id="customTeaPrice">$25</span>
+  </p>
+
+  <div class="custom-herb-options">
+    <label><input type="checkbox" value="Ashwagandha Root"> Ashwagandha Root</label>
+    <label><input type="checkbox" value="Butterfly Pea Flowers"> Butterfly Pea Flowers</label>
+    <label><input type="checkbox" value="Calendula Flowers"> Calendula Flowers</label>
+    <label><input type="checkbox" value="Ginger Root"> Ginger Root</label>
+    <label><input type="checkbox" value="Lavender"> Lavender</label>
+    <label><input type="checkbox" value="Milk Thistle"> Milk Thistle</label>
+    <label><input type="checkbox" value="Mullein Leaf"> Mullein Leaf</label>
+    <label><input type="checkbox" value="Peppermint Leaf"> Peppermint Leaf</label>
+    <label><input type="checkbox" value="Rhodiola"> Rhodiola +$15</label>
+    <label><input type="checkbox" value="Rose Petals"> Rose Petals</label>
+    <label><input type="checkbox" value="Vanilla Bean"> Vanilla Bean +$10</label>
+  </div>
+
+  <p id="teaBlendMessage" class="tea-blend-message"></p>
+
+  <button
+    id="customTeaButton"
+    class="snipcart-add-item custom-tea-button"
+    data-item-id="custom-loose-leaf-tea-blend"
+    data-item-name="Custom Loose Leaf Tea Blend"
+    data-item-price="25"
+    data-item-url="/"
+    data-item-description="Custom loose leaf tea blend. Customer may choose up to 5 herbs."
+    data-item-custom1-name="Selected Herbs"
+    data-item-custom1-type="readonly"
+    data-item-custom1-value=""
+  >
+    Add Custom Blend to Cart
+  </button>
+</section>
 
        
 
@@ -307,5 +353,58 @@
   </main>
 
   <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
+
+
+  <script>
+  const herbCheckboxes = document.querySelectorAll('.custom-herb-options input[type="checkbox"]');
+  const customTeaButton = document.getElementById('customTeaButton');
+  const customTeaPrice = document.getElementById('customTeaPrice');
+  const teaBlendMessage = document.getElementById('teaBlendMessage');
+
+  herbCheckboxes.forEach(box => {
+    box.addEventListener('change', () => {
+      const selected = Array.from(herbCheckboxes)
+        .filter(item => item.checked)
+        .map(item => item.value);
+
+      if (selected.length > 5) {
+        box.checked = false;
+        teaBlendMessage.textContent = "You can choose up to 5 herbs for your custom blend.";
+        return;
+      }
+
+    let price = 25;
+
+if (selected.includes("Vanilla Bean")) {
+  price += 10;
+}
+
+if (selected.includes("Rhodiola")) {
+  price += 15;
+}
+      customTeaPrice.textContent = `$${price.toFixed(2)}`;
+      customTeaButton.setAttribute('data-item-price', price);
+      customTeaButton.setAttribute('data-item-custom1-value', selected.join(', '));
+
+      teaBlendMessage.textContent = selected.length
+        ? `Selected: ${selected.join(', ')}`
+        : "Please choose at least one herb.";
+    });
+  });
+
+  customTeaButton.addEventListener('click', function(event) {
+    const selected = Array.from(herbCheckboxes).filter(item => item.checked);
+
+    if (selected.length === 0) {
+      event.preventDefault();
+      event.stopPropagation();
+      teaBlendMessage.textContent = "Please choose at least one herb before adding to cart.";
+    }
+  });
+</script>
+
+
+
+
 </body>
 </html>
