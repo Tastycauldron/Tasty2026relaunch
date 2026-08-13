@@ -1,427 +1,712 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0WWXPFEBN2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-0WWXPFEBN2');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WWXPFEBN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
+    gtag('js', new Date());
+    gtag('config', 'G-0WWXPFEBN2');
+  </script>
 
+  <meta charset="UTF-8">
 
-  
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tasty Cauldron</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Tasty Cauldron is brewing something new. Our refreshed magical shop experience is coming soon."
+  >
+
+  <title>Tasty Cauldron | Brewing Something New</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.css" />
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --background: #09070d;
+      --purple: #1c1028;
+      --deep-purple: #120a1a;
+      --gold: #d4af63;
+      --gold-light: #f4db9b;
+      --cream: #f7f0e6;
+      --muted: #d4c5dc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      min-height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      overflow: hidden;
+
+      font-family: "Inter", sans-serif;
+
+      color: var(--cream);
+
+      background:
+        radial-gradient(
+          circle at 50% 35%,
+          rgba(112, 62, 150, 0.26),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 20% 80%,
+          rgba(212, 175, 99, 0.08),
+          transparent 26%
+        ),
+        linear-gradient(
+          160deg,
+          #070509,
+          var(--deep-purple),
+          #08060b
+        );
+    }
+
+
+    /* STAR BACKGROUND */
+
+    body::before {
+
+      content: "";
+
+      position: fixed;
+      inset: 0;
+
+      pointer-events: none;
+
+      background-image:
+
+        radial-gradient(
+          circle at 12% 18%,
+          white 0 1px,
+          transparent 1.5px
+        ),
+
+        radial-gradient(
+          circle at 28% 72%,
+          rgba(255,255,255,.8) 0 1px,
+          transparent 1.5px
+        ),
+
+        radial-gradient(
+          circle at 72% 20%,
+          rgba(255,255,255,.7) 0 1px,
+          transparent 1.5px
+        ),
+
+        radial-gradient(
+          circle at 88% 68%,
+          white 0 1px,
+          transparent 1.5px
+        ),
+
+        radial-gradient(
+          circle at 55% 82%,
+          rgba(255,255,255,.65) 0 1px,
+          transparent 1.5px
+        );
+
+      opacity: .7;
+
+      animation: starsGlow 4s ease-in-out infinite;
+    }
+
+
+    /* FLOATING MAGIC */
+
+    .magic {
+
+      position: fixed;
+      inset: 0;
+
+      overflow: hidden;
+
+      pointer-events: none;
+    }
+
+    .magic span {
+
+      position: absolute;
+
+      bottom: -80px;
+
+      opacity: 0;
+
+      animation:
+        floatMagic
+        linear
+        infinite;
+    }
+
+    .magic span:nth-child(1) {
+      left: 8%;
+      animation-duration: 14s;
+      animation-delay: -3s;
+    }
+
+    .magic span:nth-child(2) {
+      left: 22%;
+      animation-duration: 11s;
+      animation-delay: -7s;
+    }
+
+    .magic span:nth-child(3) {
+      left: 42%;
+      animation-duration: 15s;
+      animation-delay: -4s;
+    }
+
+    .magic span:nth-child(4) {
+      left: 61%;
+      animation-duration: 12s;
+      animation-delay: -8s;
+    }
+
+    .magic span:nth-child(5) {
+      left: 79%;
+      animation-duration: 14s;
+      animation-delay: -5s;
+    }
+
+    .magic span:nth-child(6) {
+      left: 92%;
+      animation-duration: 11s;
+      animation-delay: -2s;
+    }
+
+
+    /* MAIN CARD */
+
+    .construction {
+
+      position: relative;
+
+      z-index: 10;
+
+      width: min(760px, calc(100% - 36px));
+
+      padding: 65px 50px;
+
+      text-align: center;
+
+      border:
+
+        1px solid
+        rgba(212, 175, 99, .3);
+
+      border-radius: 34px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(30, 17, 43, .83),
+          rgba(10, 7, 14, .9)
+        );
+
+      backdrop-filter: blur(14px);
+
+      box-shadow:
+
+        0 35px 90px
+        rgba(0,0,0,.6),
+
+        0 0 45px
+        rgba(212,175,99,.10);
+
+      animation:
+        entrance
+        1.2s
+        ease
+        both;
+    }
+
+
+    .moon {
+
+      font-size: 2.5rem;
+
+      margin-bottom: 22px;
+
+      filter:
+
+        drop-shadow(
+          0 0 14px
+          rgba(244,219,155,.45)
+        );
+    }
+
+
+    .eyebrow {
+
+      margin-bottom: 18px;
+
+      font-size: .75rem;
+
+      font-weight: 600;
+
+      letter-spacing: .3em;
+
+      text-transform: uppercase;
+
+      color: var(--gold);
+    }
+
+
+    h1 {
+
+      margin-bottom: 22px;
+
+      font-family: "Cinzel", serif;
+
+      font-size:
+        clamp(
+          2.3rem,
+          8vw,
+          4.7rem
+        );
+
+      line-height: 1.05;
+
+      color: var(--cream);
+
+      text-shadow:
+
+        0 0 28px
+        rgba(212,175,99,.16);
+    }
+
+
+    .intro {
+
+      max-width: 590px;
+
+      margin:
+        0 auto
+        14px;
+
+      color: var(--muted);
+
+      font-size:
+        clamp(
+          .98rem,
+          2vw,
+          1.08rem
+        );
+
+      line-height: 1.8;
+    }
+
+
+    .spell-line {
+
+      margin-top: 26px;
+
+      font-family: "Cinzel", serif;
+
+      font-size: .95rem;
+
+      letter-spacing: .08em;
+
+      color: var(--gold-light);
+    }
+
+
+    .divider {
+
+      width: 120px;
+
+      height: 1px;
+
+      margin:
+        32px auto;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          transparent,
+          var(--gold),
+          transparent
+        );
+    }
+
+
+    .social-title {
+
+      margin-bottom: 16px;
+
+      font-size: .82rem;
+
+      text-transform: uppercase;
+
+      letter-spacing: .15em;
+
+      color: #bcaeca;
+    }
+
+
+    .socials {
+
+      display: flex;
+
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+
+    .socials a {
+
+      display: inline-block;
+
+      padding:
+        12px
+        20px;
+
+      border:
+
+        1px solid
+        rgba(212,175,99,.32);
+
+      border-radius: 999px;
+
+      text-decoration: none;
+
+      color: var(--cream);
+
+      background:
+
+        rgba(
+          255,
+          255,
+          255,
+          .025
+        );
+
+      transition:
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+    }
+
+
+    .socials a:hover {
+
+      transform:
+        translateY(-3px);
+
+      border-color:
+        rgba(
+          212,
+          175,
+          99,
+          .75
+        );
+
+      box-shadow:
+
+        0 0 22px
+        rgba(
+          212,
+          175,
+          99,
+          .14
+        );
+    }
+
+
+    .footer-text {
+
+      margin-top: 34px;
+
+      font-size: .76rem;
+
+      color: #897d91;
+    }
+
+
+    /* ANIMATIONS */
+
+
+    @keyframes entrance {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          translateY(25px)
+          scale(.97);
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          translateY(0)
+          scale(1);
+      }
+    }
+
+
+    @keyframes floatMagic {
+
+      0% {
+
+        transform:
+          translateY(0)
+          rotate(0deg);
+
+        opacity: 0;
+      }
+
+      15% {
+
+        opacity: .8;
+      }
+
+      80% {
+
+        opacity: .7;
+      }
+
+      100% {
+
+        transform:
+          translateY(-115vh)
+          rotate(300deg);
+
+        opacity: 0;
+      }
+    }
+
+
+    @keyframes starsGlow {
+
+      0%,
+      100% {
+
+        opacity: .45;
+      }
+
+      50% {
+
+        opacity: .8;
+      }
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      body {
+
+        overflow-y: auto;
+      }
+
+      .construction {
+
+        margin:
+          25px
+          0;
+
+        padding:
+          48px
+          24px;
+
+        border-radius:
+          26px;
+      }
+
+      .socials {
+
+        flex-direction:
+          column;
+      }
+
+      .socials a {
+
+        width: 100%;
+      }
+    }
+
+
+    /* ACCESSIBILITY */
+
+    @media (
+      prefers-reduced-motion: reduce
+    ) {
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+      }
+    }
+
+  </style>
+
 </head>
-
-
-
 
 
 <body>
 
-<div hidden id="snipcart" data-api-key="MWIxMTcwYzAtZGZhNi00MjU3LWFjNTItZDNhZDAxZWQ0MmQ5NjM5MTIyNTc5MzQ2MTMwNzY3"></div>
 
-  
-  <div class="cauldron-smoke">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+  <div
+    class="magic"
+    aria-hidden="true"
+  >
 
- <div class="magic-sky">
-  <span>✨</span>
-  <span>✦</span>
-  <span>🧹</span>
-  <span>✧</span>
-  <span>✨</span>
-  <span>🧹</span>
-  <span>✦</span>
-  <span>🧹</span>
-  <span>✨</span>
-</div>
+    <span>✦</span>
+    <span>✨</span>
+    <span>☾</span>
+    <span>✧</span>
+    <span>✨</span>
+    <span>✦</span>
 
-
-
-
-<div class="lightning-flash"></div>
-
-
-
-  <div class="stars"></div>
-
-  <header class="hero">
-    
-    <nav class="top-nav">
-  <div class="logo">Tasty Cauldron</div>
-
-  <div class="dropdown">
-    <a href="#" class="nav-link dropdown-btn">Shop ▾</a>
-    <div class="dropdown-menu">
-      <a href="#balms">Balms</a>
-      <a href="#menus">Teas</a>
-      <a href="#nuts">Nuts</a>
-    </div>
   </div>
-</nav>
 
-   <div class="hero-content fade-in">
-      <p class="eyebrow">A modern witchy menu experience</p>
-      <h1>Step Up to the Cauldron</h1>
-      <p class="hero-text">
-        Brewing magical teas, iced matcha elixirs, and enchanted treats with a little extra wonder.
-      </p>
-      <a href="#menus" class="hero-btn">Choose Your Brew</a>
+
+  <main class="construction">
+
+    <div
+      class="moon"
+      aria-hidden="true"
+    >
+      ☾
     </div>
-  </header>
-
-  <main>
-
-    <section class="shipping-notice">
-  <p>
-    ✧ Please allow up to <strong>7 days for order processing</strong>.
-    Shipping may take an additional <strong>3–7 business days</strong>
-    after processing.
-    <br>
-    <strong>Please note:</strong> Iced matcha is not available for shipping due to milk contents.
-    Thank you for your patience while your order is prepared with care ✨
-  </p>
-</section>
 
 
+    <p class="eyebrow">
 
-<section class="balm-section" id="balms">
- 
-  <div class="section-heading">
-    <p class="eyebrow">Potioncraft for the skin</p>
-    <h2>The Balm Collection</h2>
-    <p>
-      Handcrafted botanical balms brewed with intention, comfort, and a little magic ✨
+      Something is brewing
+
     </p>
-  </div>
-
-  <div class="balm-banner">
-
-  <img src="images/herbalsalve.png" alt="Herbal balm tin with flowers and botanicals">
-
-</div>
 
 
-  <div class="portal-grid">
+    <h1>
 
-    <!-- Calm Spell Balm -->
-    <div class="portal-card plum-card">
-      <span class="portal-label">Signature Collection</span>
-      <h3>Calm Spell Balm</h3>
+      The Cauldron
+      Is Being Stirred
 
-      <p>
-        A soothing everyday balm crafted for softness, relaxation, and ritual.
-        Deeply moisturizing with a calming botanical blend perfect for dry skin,
-        bedtime routines, and moments of peace.
-      </p>
-
-      <p class="balm-price">2 oz Tin — $16</p>
-
-      <button
-        class="snipcart-add-item add-btn"
-        data-item-id="calm-spell-balm"
-        data-item-name="Calm Spell Balm"
-        data-item-price="16.00"
-        data-item-url="index.html"
-        data-item-description="A calming botanical balm for relaxation and moisture."
-        data-item-image="/images/calm-spell-balm.png">
-        Add to Cauldron
-      </button>
-    </div>
-
-    <!-- Golden Glow Balm -->
-    <div class="portal-card gold-card">
-      <span class="portal-label">Radiance Collection</span>
-      <h3>Golden Glow Balm</h3>
-
-      <p>
-        Warm, comforting, and softly sweet — like sunlight in a jar.
-        Crafted to leave skin glowing, nourished, and beautifully soft with
-        golden botanical energy ✨
-      </p>
-
-      <p class="balm-price">2 oz Tin — $18</p>
-
-      <button
-        class="snipcart-add-item add-btn"
-        data-item-id="golden-glow-balm"
-        data-item-name="Golden Glow Balm"
-        data-item-price="18.00"
-        data-item-url="index.html"
-        data-item-description="Golden botanical balm with a warm comforting glow."
-        data-item-image="/images/golden-glow-balm.png">
-        Add to Cauldron
-      </button>
-    </div>
-
-    <!-- Restore & Repair Balm -->
-    <div class="portal-card green-card">
-      <span class="portal-label">Healing Collection</span>
-      <h3>Restore & Repair Balm</h3>
-
-      <p>
-        A grounding herbal balm crafted to restore dry skin and nourish rough areas.
-        Perfect for cuticles, hands, elbows, and after-shower moisture rituals.
-      </p>
-
-      <p class="balm-price">Starting at $20</p>
-
-      <button
-        class="snipcart-add-item add-btn"
-        data-item-id="restore-repair-balm"
-        data-item-name="Restore & Repair Balm"
-        data-item-price="20.00"
-        data-item-url="index.html"
-        data-item-description="Grounding herbal balm for repair and restoration."
-        data-item-image="/images/restore-repair-balm.png">
-        Add to Cauldron
-      </button>
-    </div>
-
-  </div>
-</section>
+    </h1>
 
 
-<div class="tea-banner">
-  <img src="./images/teaplate.png" alt="Tasty Cauldron botanical tea collection">
-</div>
+    <p class="intro">
 
+      Tasty Cauldron is temporarily
+      under construction while I brew
+      an entirely new experience.
 
-    <section class="portal-section fade-in" id="menus">
-      <div class="section-heading">
-        <p class="eyebrow">The Tea and treat collection</p>
-        <h2>Pick your potion</h2>
-      </div>
-
-      <div class="portal-grid">
-        <a href="og-tea.html" class="portal-card gold-card">
-          <span class="portal-label">Original favorites</span>
-          <h3>OG Tea Menu</h3>
-          <p>Herbal classics that started the magic.</p>
-        </a>
-
-        <a href="new-tea.html" class="portal-card plum-card">
-          <span class="portal-label">Fresh brews</span>
-          <h3>New Tea Menu</h3>
-          <p>New blends with cozy, mystical energy.</p>
-        </a>
-
-        <a href="matcha-menu.html" class="portal-card green-card">
-          <span class="portal-label">Cold potions</span>
-          <h3>Iced Matcha Elixirs</h3>
-          <p>Bright, bold, magical matcha creations.</p>
-        </a>
-
-
-
-        <section class="custom-tea-section">
-  <h2>Create Your Own Tea Blend</h2>
-  <p>
-  Choose up to 5 herbs for a custom loose leaf tea blend.
-  Base price is $25.
-  Vanilla Bean adds $10.
-  Rhodiola adds $15.
-</p>
-  <p class="custom-price">
-    Price: <span id="customTeaPrice">$25</span>
-  </p>
-
-  <div class="custom-herb-options">
-    <label><input type="checkbox" value="Ashwagandha Root"> Ashwagandha Root</label>
-     <label><input type="checkbox" value="Beet root"> Beet root</label>
-    <label><input type="checkbox" value="Butterfly Pea Flowers"> Butterfly Pea Flowers</label>
-    <label><input type="checkbox" value="Calendula Flowers"> Calendula Flowers</label>
-     <label><input type="checkbox" value="Cornflowers"> Cornflowers</label>
-      <label><input type="checkbox" value="Damiana leaf"> Damiana leaf</label>
-       <label><input type="checkbox" value="Dandelion leaf"> Dandelion leaf</label>
-    <label><input type="checkbox" value="Ginger Root"> Ginger Root</label>
-     <label><input type="checkbox" value="Gotu Kola"> Gotu Kola</label>
-    <label><input type="checkbox" value="Lavender"> Lavender</label>
-     <label><input type="checkbox" value="Marshmallow leaf"> Marshmallow leaf</label>
-    <label><input type="checkbox" value="Milk Thistle"> Milk Thistle</label>
-     <label><input type="checkbox" value="Mugwort"> Mugwort</label>
-    <label><input type="checkbox" value="Mullein Leaf"> Mullein Leaf</label>
-     <label><input type="checkbox" value="Nettle Leaf"> Nettle Leaf</label>
-      <label><input type="checkbox" value="Passionflower"> Passionflower</label>
-    <label><input type="checkbox" value="Peppermint Leaf"> Peppermint Leaf</label>
-     <label><input type="checkbox" value="Prickly ash bark"> Prickly ash bark</label>
-      <label><input type="checkbox" value="Raspberry Leaf"> Raspberry Leaf</label>
-       <label><input type="checkbox" value="Roasted cacao nibs"> Roasted cacao nibs</label>
-    <label><input type="checkbox" value="Rhodiola"> Rhodiola +$15</label>
-    <label><input type="checkbox" value="Rose Petals"> Rose Petals</label>
-     <label><input type="checkbox" value="Strawberry leaf"> Strawberry leaf</label>
-      <label><input type="checkbox" value="St. John's Wort"> St. John's Wort </label>
-      <label><input type="checkbox" value="Valerian Root"> Valerian Root</label>
-    <label><input type="checkbox" value="Vanilla Bean"> Vanilla Bean +$10</label>
-  </div>
-
-  <p id="teaBlendMessage" class="tea-blend-message"></p>
-
-  <button
-    id="customTeaButton"
-    class="snipcart-add-item custom-tea-button"
-    data-item-id="custom-loose-leaf-tea-blend"
-    data-item-name="Custom Loose Leaf Tea Blend"
-    data-item-price="25"
-    data-item-url="index.html"
-    data-item-description="Custom loose leaf tea blend. Customer may choose up to 5 herbs."
-    data-item-custom1-name="Selected Herbs"
-    data-item-custom1-type="readonly"
-    data-item-custom1-value=""
-    data-item-image="/images/customteaimage.png">
-  
-  </button>
-  Add Custom Blend to Cart
-  </button>
-</section>
-
-       
-
-        <a href="herb-descriptions.html" class="portal-card plum-card">
-  <span class="portal-label">Plant magic</span>
-  <h3>Herb Descriptions</h3>
-  <p>Learn the uses and benefits of the herbs featured in our brews.</p>
-</a>
-      </div>
-    </section>
-
-
-<section class="nuts-section fade-in" id="nuts">
-  <div class="section-heading">
-    <p class="eyebrow">Sweet enchantments</p>
-    <h2>Enchanted Nuts</h2>
-    <p>
-      Candied creations brewed with crunch, warmth, and a little chaos ✨
     </p>
-  </div>
-
-  <div class="nuts-banner">
-    <img src="./images/nutplate.png" alt="Tasty Cauldron enchanted candied nuts">
-  </div>
-
-  <div class="portal-grid">
-    <a href="nuts-menu.html" class="portal-card gold-card">
-      <span class="portal-label">Candied Collection</span>
-      <h3>Enter the Nut Menu</h3>
-      <p>Spellbound almonds, pecans, walnuts, and magical mixes.</p>
-    </a>
-  </div>
-</section>
 
 
+    <p class="intro">
 
+      New magic, familiar favorites,
+      and a few things you haven't
+      seen yet are on the way.
 
-    <section class="contact-section" id="contact">
-  <div class="section-heading">
-    <p class="eyebrow">Reach the cauldron</p>
-    <h2>Contact Us</h2>
-    <p>
-      Have a question, need help placing an order, or want more details about our menu items?
-      Send a message below.
     </p>
-  </div>
 
-  <div class="contact-wrap">
-    <div class="contact-card">
-      <h3>Let’s Connect</h3>
-      <p><strong>Instagram:</strong> @tastycauldron / @tastycauldronco</p>
-      <p><strong>Email:</strong> Sigourney@tastycauldron.com</p>
-        <p><strong>{Phone}:</strong> 5184444064</p>
-        <p><strong>Hours:</strong> By request / message for availability</p>
-      <p><strong>Payments Accepted:</strong> Visa, Mastercard, American Express, PaypPal</p>
+
+    <p class="spell-line">
+
+      ✧ Stay close. The magic is only beginning. ✧
+
+    </p>
+
+
+    <div class="divider"></div>
+
+
+    <p class="social-title">
+
+      Follow the magic while you wait
+
+    </p>
+
+
+    <div class="socials">
+
+      <a
+        href="https://instagram.com/tastycauldronco"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        @tastycauldronco
+
+      </a>
+
+
+      <a
+        href="https://instagram.com/tastycauldron"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        @tastycauldron
+
+      </a>
+
     </div>
 
-    <form class="contact-form" action="https://formspree.io/f/xzdypwvb" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+    <p class="footer-text">
 
-      <label for="subject">Subject</label>
-      <input type="text" id="subject" name="subject">
+      © 2026 Tasty Cauldron
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
+    </p>
 
-      <button type="submit">Send Message</button>
 
-      </form>
-  </div>
-</section>
   </main>
-
-  <script async src="https://cdn.snipcart.com/themes/v3.3.0/default/snipcart.js"></script>
-
-
-  <script>
-  const herbCheckboxes = document.querySelectorAll('.custom-herb-options input[type="checkbox"]');
-  const customTeaButton = document.getElementById('customTeaButton');
-  const customTeaPrice = document.getElementById('customTeaPrice');
-  const teaBlendMessage = document.getElementById('teaBlendMessage');
-
-  herbCheckboxes.forEach(box => {
-    box.addEventListener('change', () => {
-      const selected = Array.from(herbCheckboxes)
-        .filter(item => item.checked)
-        .map(item => item.value);
-
-      if (selected.length > 5) {
-        box.checked = false;
-        teaBlendMessage.textContent = "You can choose up to 5 herbs for your custom blend.";
-        return;
-      }
-
-    let price = 25;
-
-if (selected.includes("Vanilla Bean")) {
-  price += 10;
-}
-
-if (selected.includes("Rhodiola")) {
-  price += 15;
-}
-      customTeaPrice.textContent = `$${price.toFixed(2)}`;
-      customTeaButton.setAttribute('data-item-price', price);
-      customTeaButton.setAttribute('data-item-custom1-value', selected.join(', '));
-
-      teaBlendMessage.textContent = selected.length
-        ? `Selected: ${selected.join(', ')}`
-        : "Please choose at least one herb.";
-    });
-  });
-
-  customTeaButton.addEventListener('click', function(event) {
-    const selected = Array.from(herbCheckboxes).filter(item => item.checked);
-
-    if (selected.length === 0) {
-      event.preventDefault();
-      event.stopPropagation();
-      teaBlendMessage.textContent = "Please choose at least one herb before adding to cart.";
-    }
-  });
-</script>
-
-
 
 
 </body>
+
 </html>
