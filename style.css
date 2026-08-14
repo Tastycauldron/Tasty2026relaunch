@@ -1212,3 +1212,233 @@ html {
   font-weight: 800;
   cursor: pointer;
 }
+
+/* =========================================================
+   TASTY CAULDRON SINGLE-PAGE SHOP ADDITIONS
+   ========================================================= */
+
+.logo { text-decoration: none; }
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.cart-button {
+  color: #0b0a0f;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.8rem 1.1rem;
+  background: linear-gradient(135deg, var(--gold), #f0c57b);
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(200, 154, 85, 0.22);
+}
+
+.shop-jump-section,
+.collection-section {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 4rem 0 6rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.shop-jump-section { padding-top: 3rem; }
+
+.section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-nav a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 0.85rem 1.15rem;
+  border: 1px solid rgba(200, 154, 85, 0.32);
+  border-radius: 999px;
+  background: rgba(20, 16, 28, 0.72);
+  box-shadow: 0 0 16px rgba(200, 154, 85, 0.08);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.section-nav a:hover {
+  transform: translateY(-2px);
+  border-color: rgba(200, 154, 85, 0.7);
+  box-shadow: 0 0 20px rgba(200, 154, 85, 0.22);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.product-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1.7rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: linear-gradient(180deg, rgba(25, 18, 35, 0.88), rgba(14, 11, 20, 0.92));
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+}
+
+.product-card h3,
+.subcollection-heading h3,
+.coming-soon-card h3 {
+  font-family: 'Cinzel', serif;
+}
+
+.product-card h3 {
+  margin: 0 0 0.8rem;
+  font-size: 1.45rem;
+}
+
+.product-desc,
+.option-note {
+  color: #eadfcf;
+  line-height: 1.65;
+}
+
+.product-desc { margin: 0 0 0.9rem; }
+.option-note { margin: auto 0 1rem; font-size: 0.92rem; color: var(--muted); }
+
+.product-price {
+  color: #ffd970;
+  font-weight: 700;
+  margin: auto 0 1rem;
+}
+
+.add-btn {
+  width: 100%;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.9rem 1.15rem;
+  cursor: pointer;
+  color: #0b0a0f;
+  background: linear-gradient(135deg, var(--gold), #f0c57b);
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  box-shadow: 0 10px 24px rgba(200,154,85,0.22);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.add-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(200,154,85,0.34); }
+
+.subcollection-heading {
+  margin: 2.5rem 0 1.4rem;
+  padding: 1.4rem 1.6rem;
+  border-left: 3px solid var(--gold);
+  background: linear-gradient(90deg, rgba(200,154,85,0.10), transparent);
+  border-radius: 0 18px 18px 0;
+}
+
+.subcollection-heading h3 { margin: 0.25rem 0 0.45rem; font-size: 1.8rem; }
+.subcollection-heading p { margin: 0; color: #eadfcf; }
+.collection-kicker { color: var(--gold); text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.76rem; }
+.new-tea-heading { margin-top: 4rem; border-left-color: var(--plum); background: linear-gradient(90deg, rgba(161,109,220,0.12), transparent); }
+.new-tea-heading .collection-kicker { color: #cfa7ff; }
+
+.coming-soon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.coming-soon-card {
+  min-height: 220px;
+  padding: 1.8rem;
+  border-radius: 26px;
+  border: 1px solid rgba(255,255,255,0.09);
+  background: rgba(20,16,28,0.72);
+  box-shadow: var(--shadow);
+}
+
+.coming-soon-card h3 { margin: 1rem 0 0.7rem; font-size: 1.6rem; }
+.coming-soon-card p { color: #eadfcf; line-height: 1.65; }
+.coming-badge { display: inline-block; padding: 0.45rem 0.7rem; border-radius: 999px; background: rgba(255,255,255,0.06); color: var(--muted); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.12em; }
+
+.herb-search-wrap {
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+}
+
+.herb-search-wrap label { display: block; margin-bottom: 0.5rem; color: var(--muted); }
+.herb-search-wrap input {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(200,154,85,0.28);
+  background: rgba(11,10,15,0.82);
+  color: var(--text);
+  font: inherit;
+}
+
+.herb-accordion {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.herb-detail {
+  align-self: start;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  background: rgba(20,16,28,0.72);
+  overflow: hidden;
+}
+
+.herb-detail summary {
+  cursor: pointer;
+  padding: 1rem 1.15rem;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  color: #f5d77b;
+}
+
+.herb-detail > div { padding: 0 1.15rem 1rem; }
+.herb-detail p { color: #eadfcf; line-height: 1.55; margin: 0.45rem 0; }
+.herb-detail .herb-note { color: #ffb3b3; }
+.herb-disclaimer { max-width: 800px; margin: 1.5rem auto 0; text-align: center; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+
+.back-to-top {
+  position: fixed;
+  right: 1.1rem;
+  bottom: 1.1rem;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #0b0a0f;
+  background: linear-gradient(135deg, var(--gold), #f0c57b);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+}
+
+@media (max-width: 900px) {
+  .product-grid-3,
+  .coming-soon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 700px) {
+  .single-page-nav { align-items: flex-start; }
+  .nav-actions { width: 100%; flex-wrap: wrap; }
+  .nav-actions .nav-link, .nav-actions .cart-button { flex: 1 1 auto; text-align: center; }
+  .product-grid,
+  .product-grid-3,
+  .coming-soon-grid,
+  .herb-accordion { grid-template-columns: 1fr; }
+  .section-nav { gap: 0.6rem; }
+  .section-nav a { padding: 0.75rem 0.9rem; font-size: 0.9rem; }
+  .collection-section { padding: 3rem 0 4.5rem; }
+}
