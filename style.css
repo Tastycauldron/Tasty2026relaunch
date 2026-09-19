@@ -1442,3 +1442,47 @@ html {
   .section-nav a { padding: 0.75rem 0.9rem; font-size: 0.9rem; }
   .collection-section { padding: 3rem 0 4.5rem; }
 }
+
+
+
+
+
+
+/* ✨ SIGNATURE TEAS + COMING SOON FEATURE IMAGES */
+.signatureteas,
+.coming-soon {
+  max-width: 700px;
+  margin: 2rem auto 3rem;
+  padding: 0.8rem;
+  border-radius: 30px;
+  background: rgba(20, 16, 28, 0.72);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 0 28px rgba(212, 175, 55, 0.18);
+}
+
+.signatureteas img,
+.coming-soon img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* subtle magical hover */
+.signatureteas img:hover,
+.coming-soon img:hover {
+  transform: scale(1.02);
+}
+
+
+
+
+@media (max-width: 700px) {
+  .signatureteas img,
+  .coming-soon img {
+    height: 280px;
+  }
+}
+
